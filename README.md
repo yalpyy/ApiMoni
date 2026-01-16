@@ -1,7 +1,7 @@
 # API İzleyici
 
 ## Proje Tanımı
-API İzleyici, Chrome DevTools içine eklenen bir paneldir. `chrome.devtools.network.onRequestFinished` kullanarak ağ isteklerini yakalar, son 200 kaydı bellek ve `chrome.storage.session` içinde tutar. Panelde arama, filtreler ve detay çekmecesi ile istek/yanıt verilerini incelenebilir hale getirir. DevTools sekme adı "API Monitor" olarak görünür.
+API İzleyici, Chrome DevTools içine eklenen bir paneldir. `chrome.devtools.network.onRequestFinished` kullanarak ağ isteklerini yakalar, son 200 kaydı bellek ve `chrome.storage.session` içinde tutar. DevTools sekme adı "API Monitor" olarak görünür.
 
 ## Özellikler
 - DevTools paneli: "API Monitor" sekmesi
@@ -10,6 +10,7 @@ API İzleyici, Chrome DevTools içine eklenen bir paneldir. `chrome.devtools.net
 - Detay çekmecesi (İstek / Yanıt / Başlıklar / Zamanlama)
 - cURL kopyalama, yanıt JSON kopyalama, JSON dışa aktarma
 - Gövde boyutu limiti: 200KB (güvenli kısaltma)
+- Kısayol ile açılan bağımsız "API İzleyici" ekranı
 
 ## Kurulum
 ```bash
@@ -25,12 +26,17 @@ npm run build
 5) DevTools’u açın ve "API Monitor" sekmesini bulun
 
 ## Kullanım
+- DevTools paneli: `F12` -> "API Monitor" sekmesi
+- Kısayol: `Ctrl+Shift+Y` (Mac: `Command+Shift+Y`) -> "API İzleyici" sekmesi açılır
 - Arama kutusu ile URL/endpoint/içerik içinde arama yapabilirsiniz.
 - Filtreler ile sadece hatalar, XHR/Fetch veya `/api` isteklerini görüntüleyebilirsiniz.
 - Bir satıra tıklayın ve sağdaki detay çekmecesinde istek/yanıt içeriklerini inceleyin.
 - "cURL olarak kopyala" ile isteği CLI formatında alın.
 - "Yanıt JSON'unu kopyala" ile yanıt içeriğini panoya kopyalayın.
 - "Dışa Aktar (JSON)" ile tüm kayıtları JSON olarak indirin.
+
+## Kısayol Değiştirme
+- `chrome://extensions/shortcuts` adresinden kısayolu değiştirebilirsiniz.
 
 ## Sık Karşılaşılan Sorunlar
 - Panel görünmüyor: DevTools açık mı? Uzantı yüklü mü? `dist` klasörünü doğru seçtiğinizden emin olun.
