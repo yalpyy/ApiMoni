@@ -1,0 +1,1 @@
+﻿chrome.devtools.panels.create("API Monitor", "", "panel.html");

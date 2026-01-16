@@ -1,0 +1,1 @@
+const d="open-monitor",m="monitor.html";chrome.commands.onCommand.addListener(r=>{if(r!==d)return;const o=chrome.runtime.getURL(m);chrome.tabs.query({},t=>{const e=t.find(n=>n.url===o);if(e!=null&&e.id){chrome.tabs.update(e.id,{active:!0}),typeof e.windowId=="number"&&chrome.windows.update(e.windowId,{focused:!0});return}chrome.tabs.create({url:o})})});
